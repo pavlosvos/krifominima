@@ -22,5 +22,5 @@
 # ignore phpstorm files
 /.idea
 
-# ignore this 
+# ignore this
 /npm-debug.log
