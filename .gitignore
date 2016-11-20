@@ -18,4 +18,9 @@
 .DS_Store
 
 
-# testing first commit
+
+# ignore phpstorm files
+/.idea
+
+# ignore this 
+/npm-debug.log
