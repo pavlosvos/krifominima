@@ -1,0 +1,6 @@
+{
+  "name": "Submitform",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Submitform.js"
+}

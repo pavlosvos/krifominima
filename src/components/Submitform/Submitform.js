@@ -9,9 +9,9 @@
 
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Feedback.css';
+import s from './Submitform.css';
 
-class Feedback extends React.Component {
+class Submitform extends React.Component {
   render() {
     return (
       <div className={s.root}>
@@ -31,4 +31,4 @@ class Feedback extends React.Component {
   }
 }
 
-export default withStyles(s)(Feedback);
+export default withStyles(s)(Submitform);
