@@ -12,8 +12,24 @@ import React, { Component } from 'react';
 
 
 class TextDisplay extends Component {
+
+    handleClick (event){
+        // console.log(this, 'button clicked');
+        this.props.deleteLetter()
+    }
+
+
     render () {
-        return <div>I am going to display text: {this.props.text}</div>
+        return (
+            <div>
+                <br />
+                <div>I am going to display text:<br />
+                    {this.props.text}
+                </div>
+                <br /><br />
+                <button onClick={this.handleClick.bind(this)}>Delete the shit</button>
+            </div>
+        )
     }
 }
 

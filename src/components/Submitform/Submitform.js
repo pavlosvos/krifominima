@@ -21,11 +21,20 @@ class Submitform extends React.Component {
         }
     }
 
+    deleteLetter () {
+        // take current this.state.inputText
+        // delete letter
+        // update state
+        this.setState({
+            inputText: this.state.inputText.substring(0 , this.state.inputText.length -1)
+        })
+    }
+
     handleChange(event) { // function to return value of input field to state via a value
         this.setState({
             inputText: event.target.value
         })
-        console.log(event.target.value); // just logging the value in the inputText
+      //  console.log(event.target.value); // just logging the value in the inputText
     }
 
 
@@ -48,7 +57,9 @@ class Submitform extends React.Component {
             className={s.link}
             href="https://github.com/kriasoft/react-starter-kit/issues/new"
           >Report an issue</a>
-            <TextDisplay text={this.state.inputText}/>
+            <br />
+            <TextDisplay text={this.state.inputText} deleteLetter={this.deleteLetter.bind(this)}/>
+
         </div>
       </div>
     );
