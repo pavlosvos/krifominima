@@ -14,18 +14,18 @@ import TextDisplay from './TextDisplay';
 
 class Submitform extends React.Component {
 
-    constructor(props, context) {
+    constructor(props, context) { // needed to set state
         super(props, context)
-        this.state = {
-            inputText: 'intitial text'
+        this.state = { // you keep track of things in STATE and pass them down as PROPS
+            inputText: 'intitial text' // gives the inputfield its first input text
         }
     }
 
-    handleChange(event) {
+    handleChange(event) { // function to return value of input field to state via a value
         this.setState({
             inputText: event.target.value
         })
-        console.log(event.target.value);
+        console.log(event.target.value); // just logging the value in the inputText
     }
 
 
@@ -48,6 +48,7 @@ class Submitform extends React.Component {
             className={s.link}
             href="https://github.com/kriasoft/react-starter-kit/issues/new"
           >Report an issue</a>
+            <TextDisplay text={this.state.inputText}/>
         </div>
       </div>
     );
